@@ -1,18 +1,23 @@
-/*import Contact from "./pages/contact";*/
 import ItemListContainer from "./components/containers/ItemListContainer";
 import NavBar from "./components/layout/NavBar";
-import Home from "./pages/home"
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
 function App() {
 
   return (
-    <>
-    <NavBar />
-    <ItemListContainer/>
-    <Home />
-    {/* <Contact />*/}
-    </>
+    <div className="App">
+      <BrowserRouter>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<ItemListContainer />}/>
+          <Route path="/category/:categoryId" element={<ItemListContainer />}/>
+          <Route path="/item/:itemId" element={<ItemDetailContainer />}/>
+          <Route path="*" element={<h1>404 NOT FOUND</h1>} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 

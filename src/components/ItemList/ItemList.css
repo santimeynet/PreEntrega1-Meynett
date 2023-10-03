@@ -1,0 +1,15 @@
+.ListGroup {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+  
+.ListGroup .item {
+    width: 30%;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #928e8e;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+  

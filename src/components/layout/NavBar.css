@@ -1,0 +1,36 @@
+.NavBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+}
+  
+.NavBar h3 {
+    margin: 0;
+}
+  
+.Categories {
+    display: flex;
+    gap: 20px;
+}
+  
+.Option {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+  
+.Option:hover {
+    color: #ffcc00;
+}
+  
+.ActiveOption {
+    color: #ffcc00;
+}
+  
+.title{
+    text-decoration: none;
+    color: white;
+}
