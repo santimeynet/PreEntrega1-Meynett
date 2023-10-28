@@ -1,0 +1,32 @@
+.cart-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+}
+
+.cart-total {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.clear-cart-button {
+    margin-top: 10px;
+    background-color: #b1b1b1;
+    color: #fff;
+    border-radius: 10px 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-right: 0.3rem;
+}
+
+.checkout-button {
+    margin-top: 10px;
+    background-color: #afafaf;
+    color: #fff;
+    border-radius: 10px 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}

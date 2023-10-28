@@ -5,6 +5,7 @@
     padding: 20px;
     margin: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
   
 .ItemHeader {
@@ -35,19 +36,29 @@
     align-items: center;
     margin-top: 20px;
 }
+
+.Controls{
+    display: flex;
+    height: 2rem;
+}
+
+.Number{
+    margin-top: 10px;
+}
   
 .Button {
-    background-color: #ffcc00;
+    background-color: #b9b9b9;
     color: #333;
+    font-weight: bold;
     border: none;
     border-radius: 5px;
-    padding: 10px 20px;
+    padding: 10px 15px;
     cursor: pointer;
     margin: 0 10px;
     transition: background-color 0.3s ease;
 }
   
 .Button:hover {
-    background-color: #ffc600;
+    background-color: #999999;
 }
   

@@ -1,7 +1,23 @@
+import CartContext from "../../context/CartContext"
 import ItemCount from "../ItemCount/ItemCount"
 import './ItemDetail.css'
+import { useContext, useState } from "react"
+import { Link } from "react-router-dom"
 
 const ItemDetail = ({id, nombre, img, category, precio, cantidad}) => {
+    const [quantityAdded, setQuantityAdded] = useState(0)
+
+    const { addItem } = useContext(CartContext)
+
+    const handleOnAdd = (quantity) => {
+        setQuantityAdded(quantity)
+
+        const item = {
+            id, nombre, precio
+        }
+
+        addItem(item, quantity)
+    }
 
 
     return (
@@ -26,7 +42,13 @@ const ItemDetail = ({id, nombre, img, category, precio, cantidad}) => {
                 </p>
             </section>
             <footer className="ItemFooter">
-            <ItemCount initial={1} cantidad={cantidad} onAdd={(quantity) => console.log('Cantidad agregada:', quantity)} />
+            {
+                    quantityAdded > 0 ? (
+                        <Link to='/cart' className='Button'>Terminar Compra</Link>
+                    ) : (
+                        <ItemCount initial={1} cantidad={cantidad} onAdd={handleOnAdd}/>
+                    )
+                }
             </footer>
         </article>
     )
